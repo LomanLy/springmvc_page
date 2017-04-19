@@ -33,21 +33,21 @@ public class UserServiceImpl implements UserService {
         PageHelper.startPage(pageNoInt, pageSizeInt);
         List<User> list = userDao.selectUserByUserName(userName);
         PageInfo<User> page = new PageInfo<>(list);
-        System.out.println("PageNu"+page.getPageNum());
-        System.out.println("PageSi"+page.getPageSize());
-        System.out.println("StartR"+page.getStartRow());
-        System.out.println("EndRow"+page.getEndRow());
-        System.out.println("Total("+page.getTotal());
-        System.out.println("Pages("+page.getPages());
-        System.out.println("FirstP"+page.getFirstPage());
-        System.out.println("LastPa"+page.getLastPage());
-        System.out.println("asPrev"+page.isHasPreviousPage());
-        System.out.println("asNext"+page.isHasNextPage());
-        System.out.println("List()"+page.getList());
-        System.out.println("List-----"+list.get(1));
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i).getUserName()+ "========= "+i);
-        }
+//        System.out.println("PageNu"+page.getPageNum());
+//        System.out.println("PageSi"+page.getPageSize());
+//        System.out.println("StartR"+page.getStartRow());
+//        System.out.println("EndRow"+page.getEndRow());
+//        System.out.println("Total("+page.getTotal());
+//        System.out.println("Pages("+page.getPages());
+//        System.out.println("FirstP"+page.getFirstPage());
+//        System.out.println("LastPa"+page.getLastPage());
+//        System.out.println("asPrev"+page.isHasPreviousPage());
+//        System.out.println("asNext"+page.isHasNextPage());
+//        System.out.println("List()"+page.getList());
+//        System.out.println("List-----"+list.get(1));
+//        for (int i = 0; i < list.size(); i++) {
+//            System.out.println(list.get(i).getUserName()+ "========= "+i);
+//        }
 
         return page;
     }
